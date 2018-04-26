@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.vtobank.module.entity.ShopActivity" table="hoyi_shop_activity">
+		<id name="id" column="id" type="java.lang.Long">
+			<generator class="identity" />
+		</id>
+		<property name="shopId" column="shop_id" type="long" />
+		<property name="shopCode" column="shop_code" type="string" length="100"/>
+		<property name="shopName" column="shop_name" type="string" />
+		<property name="goodsId" column="goods_id" type="long" />
+		<property name="goodsName" column="goods_name" type="string" />
+		<property name="discount" column="discount" type="double" />
+		<property name="discountPrice" column="discount_price" type="big_decimal" />
+		<property name="discountStartDate" column="discount_start_date" type="timestamp"/>
+		<property name="discountEndDate" column="discount_end_date" type="timestamp"/>
+		<property name="price" column="price" type="big_decimal"/>
+		<property name="score" column="score" type="integer" />
+		<property name="salePrice" column="sale_price" type="big_decimal" />
+		<property name="saleScore" column="sale_score" type="integer" />
+		<property name="currentStatus" column="current_status" type="string" length="2"/>		
+		<property name="activityPhotos" column="activity_photos" type="string" length="255"/>		
+		<property name="activitySummary" column="activity_summary" type="string" length="255"/>
+		<property name="createTime" column="create_time" type="timestamp"/>		
+	</class>
+</hibernate-mapping>

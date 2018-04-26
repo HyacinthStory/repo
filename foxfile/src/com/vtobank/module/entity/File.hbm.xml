@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.vtobank.module.entity.File" table="hoyi_file">
+		<id name="id" column="id" type="java.lang.Long">
+			<generator class="identity" />
+		</id>
+		<property name="fileName"   column="file_name"   type="string" />
+		<property name="uploadName"   column="upload_name"   type="string" />
+		<property name="filePath"   column="file_path"   type="string" />
+		<property name="fileType"   column="file_type"   type="string" length="50"/>
+		<property name="delflag"   column="del_flag"   type="string" length="1"/>
+		<property name="createTime"   column="create_time"   type="timestamp" />
+		<property name="entityName"   column="entity_name"   type="string"  length="100"/>
+		<property name="entityId"   column="entity_id"   type="long" />
+		<property name="entityCode"   column="entity_code"   type="string"  length="100"/>
+		<property name="useType"   column="use_type"   type="string" length="2"/>
+		<property name="bankCode"   column="bank_code"   type="string"  length="100"/>
+		<property name="bankId"   column="bank_id"   type="long" />
+	</class>
+</hibernate-mapping>

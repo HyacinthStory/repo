@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.vtobank.module.entity.ServerConfig" table="hoyi_server_config">
+		<id name="id" column="id" type="java.lang.Long">
+			<generator class="identity" />
+		</id> 
+		<property name="code"   column="code"   type="string"  length="64"/>
+		<property name="serverName"   column="server_name"   type="string" />
+		<property name="domainName"   column="domain_name"   type="string" length="50"/>
+		<property name="serverIp"   column="server_ip"   type="string"  length="50"/>
+		<property name="serverPort"   column="server_port"   type="integer" />
+		<property name="useType"   column="use_type"   type="string" length="2"/>
+		<property name="appName"   column="app_name"   type="string" length="20"/>
+		
+	</class>
+</hibernate-mapping>
